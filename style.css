@@ -14,10 +14,10 @@ body{
 .header{
     background:
         linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-        url("header-bg.jpeg");
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+        url("header-bg.jpg.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     color:#fff;
     text-align:center;
