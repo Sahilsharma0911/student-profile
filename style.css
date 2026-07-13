@@ -20,7 +20,7 @@ body{
 ========================== */
 
 .header{
-    height:70vh;
+    height:80vh;
     background:url("header-bg.jpg.png") center center/cover no-repeat;
     position:relative;
     display:flex;
@@ -38,6 +38,7 @@ body{
     align-items:center;
     text-align:center;
     color:#fff;
+    padding-bottom:120px;
 }
 
 .overlay h1{
@@ -58,7 +59,7 @@ body{
 .profile{
     width:90%;
     max-width:1200px;
-    margin:-90px auto 50px;
+    margin:-30px auto 50px;
     display:grid;
     grid-template-columns:320px 1fr;
     gap:30px;
