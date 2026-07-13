@@ -5,159 +5,484 @@
     font-family:'Poppins',sans-serif;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     background:#eef3f8;
     color:#333;
 }
 
-/* Header */
+/* ================= HEADER ================= */
+
 .header{
+    height:330px;
     background:
-        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-        url("header-bg.jpg.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("header-bg.jpg.jpeg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 
-    color:#fff;
-    text-align:center;
-    padding:40px 20px 140px;
-    box-shadow:0 3px 10px rgba(0,0,0,.15);
-}
-
-/* Header Text */
-.header h1{
-    font-size:36px;
-    font-weight:700;
-}
-
-.header p{
-    margin-top:8px;
-    font-size:18px;
-    font-weight:300;
-}
-
-/* Profile Card */
-.profile{
-    width:90%;
-    max-width:1100px;
-    margin:-90px auto 35px;
-    background:#fff;
-    border-radius:12px;
     display:flex;
-    flex-wrap:wrap;
-    padding:35px;
-    box-shadow:0 8px 25px rgba(0,0,0,.15);
-}
-
-/* Left */
-.left{
-    width:260px;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-}
 
-/* Photo */
-.photo{
-    width:180px;
-    height:220px;
-    object-fit:cover;
-    border-radius:12px;
-    border:5px solid #fff;
-    box-shadow:0 8px 20px rgba(0,0,0,.25);
-}
-
-.left h2{
-    margin-top:15px;
-    color:#003366;
-    font-size:28px;
-}
-
-.status{
-    display:inline-block;
-    margin-top:12px;
-    padding:10px 22px;
-    background:#28a745;
     color:#fff;
-    border-radius:25px;
-    font-weight:600;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
 }
 
-/* Right */
-.right{
-    flex:1;
-    padding-left:35px;
-}
-
-/* Table */
-table{
-    width:100%;
-    border-collapse:collapse;
-}
-
-table tr:nth-child(even){
-    background:#f7f9fc;
-}
-
-table td{
-    padding:14px;
-    border-bottom:1px solid #ddd;
-    font-size:16px;
-}
-
-table td:first-child{
-    width:240px;
-    font-weight:600;
-    color:#003366;
-}
-
-.pass{
-    color:#28a745;
-    font-weight:bold;
-}
-
-/* Footer */
-footer{
-    text-align:center;
-    padding:25px;
-    margin-top:20px;
-    color:#777;
-    font-size:15px;
-}
-
-/* Mobile */
-@media(max-width:768px){
-
-.profile{
-    flex-direction:column;
-    margin:-70px auto 25px;
+.overlay{
     padding:20px;
 }
 
-.left{
-    width:100%;
+.header h1{
+    font-size:48px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-shadow:2px 2px 10px rgba(0,0,0,.5);
 }
 
-.right{
-    padding-left:0;
-    margin-top:25px;
+.header p{
+    margin-top:15px;
+    font-size:20px;
+    font-weight:300;
+}
+
+/* ================= PROFILE ================= */
+
+.profile{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:-80px auto 40px;
+
+    background:rgba(255,255,255,.96);
+
+    border-radius:18px;
+
+    display:flex;
+    flex-wrap:wrap;
+
+    padding:40px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+    backdrop-filter:blur(10px);
+
+}
+
+/* LEFT */
+
+.left{
+
+    width:280px;
+
+    text-align:center;
+
 }
 
 .photo{
-    width:170px;
-    height:210px;
+
+    width:190px;
+    height:230px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    border:6px solid #fff;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+
+    transition:.4s;
+
 }
 
-.header h1{
-    font-size:28px;
+.photo:hover{
+
+    transform:scale(1.05);
+
+}
+
+.left h2{
+
+    margin-top:20px;
+
+    color:#d71920;
+
+    font-size:30px;
+
+}
+
+.status{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:12px 24px;
+
+    border-radius:30px;
+
+    background:linear-gradient(90deg,#28a745,#13b15e);
+
+    color:#fff;
+
+    font-weight:600;
+
+    box-shadow:0 8px 20px rgba(40,167,69,.35);
+
+}
+
+.social{
+
+    margin-top:25px;
+
+}
+
+.social a{
+
+    display:inline-block;
+
+    width:45px;
+
+    height:45px;
+
+    line-height:45px;
+
+    text-align:center;
+
+    border-radius:50%;
+
+    margin:0 6px;
+
+    background:#003366;
+
+    color:#fff;
+
+    transition:.3s;
+
+    font-size:18px;
+
+}
+
+.social a:hover{
+
+    background:#d71920;
+
+    transform:translateY(-5px);
+
+}
+
+/* RIGHT */
+
+.right{
+
+    flex:1;
+
+    padding-left:40px;
+
+}
+
+.title{
+
+    margin-bottom:25px;
+
+}
+
+.title h2{
+
+    color:#003366;
+
+    font-size:30px;
+
+}
+
+.title i{
+
+    color:#d71920;
+
+    margin-right:10px;
+
+}/* ================= TABLE ================= */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    overflow:hidden;
+
+    border-radius:12px;
+
+}
+
+table tr{
+
+    transition:.3s;
+
+}
+
+table tr:nth-child(even){
+
+    background:#f7f9fc;
+
+}
+
+table tr:hover{
+
+    background:#eaf4ff;
+
 }
 
 table td{
-    display:block;
-    width:100%;
+
+    padding:16px;
+
+    border-bottom:1px solid #ddd;
+
+    font-size:16px;
+
 }
 
 table td:first-child{
-    background:#f0f4f8;
+
+    width:260px;
+
+    font-weight:600;
+
+    color:#003366;
+
 }
+
+table i{
+
+    color:#d71920;
+
+    margin-right:8px;
+
+}
+
+.pass{
+
+    color:#28a745;
+
+    font-weight:bold;
+
+    font-size:17px;
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    background:#003366;
+
+    color:#fff;
+
+    margin-top:50px;
+
+    padding:40px 20px;
+
+    text-align:center;
+
+}
+
+.footer-content h3{
+
+    font-size:28px;
+
+    margin-bottom:10px;
+
+}
+
+.footer-content p{
+
+    margin:8px 0;
+
+    color:#ddd;
+
+}
+
+.footer-icons{
+
+    margin:25px 0;
+
+}
+
+.footer-icons a{
+
+    display:inline-block;
+
+    width:45px;
+
+    height:45px;
+
+    line-height:45px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    color:#003366;
+
+    margin:0 8px;
+
+    transition:.3s;
+
+    font-size:18px;
+
+}
+
+.footer-icons a:hover{
+
+    background:#d71920;
+
+    color:#fff;
+
+    transform:translateY(-5px);
+
+}
+
+.copyright{
+
+    margin-top:15px;
+
+    font-size:14px;
+
+    color:#bbb;
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+.profile{
+
+    flex-direction:column;
+
+    margin:-60px auto 30px;
+
+    padding:25px;
+
+}
+
+.left{
+
+    width:100%;
+
+    margin-bottom:30px;
+
+}
+
+.right{
+
+    padding-left:0;
+
+}
+
+.header{
+
+    height:260px;
+
+}
+
+.header h1{
+
+    font-size:32px;
+
+}
+
+.header p{
+
+    font-size:16px;
+
+}
+
+.photo{
+
+    width:170px;
+
+    height:210px;
+
+}
+
+table td{
+
+    display:block;
+
+    width:100%;
+
+}
+
+table td:first-child{
+
+    background:#f0f4f8;
+
+}
+
+}
+
+/* ================= ANIMATIONS ================= */
+
+.profile{
+
+    animation:fadeIn .8s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.status{
+
+    animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        box-shadow:0 0 0 0 rgba(40,167,69,.5);
+
+    }
+
+    70%{
+
+        box-shadow:0 0 0 15px rgba(40,167,69,0);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 0 rgba(40,167,69,0);
+
+    }
 
 }
